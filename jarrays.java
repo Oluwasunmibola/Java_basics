@@ -15,8 +15,10 @@ public class jarrays {
         int startingIndex = 1;
         int endingIndex = 4;
         char key = 'o';
-        //replace values in array
-       // vowels[2] = 'x';
+        // replace values in array
+       vowels[2] = 'x';
+    //    fill an array with a value
+       Arrays.fill(vowels, startingIndex, endingIndex, 'x');
        Arrays.sort(vowels, startingIndex, endingIndex);
        Arrays.sort(vowels);
        int foundItemIndex = Arrays.binarySearch(vowels, startingIndex, endingIndex, key); // returns index of key if found
@@ -24,6 +26,19 @@ public class jarrays {
 
         System.out.println(vowels.length);
         System.out.println(Arrays.toString(vowels));
+
+    int numbers[] = {1, 2, 3, 4, 5};
+
+
+    int copyOfNumbers[] = Arrays.copyOf(numbers, numbers.length);
+    int subCopyNumbers[] = Arrays.copyOfRange(numbers, startingIndex, endingIndex);
+
+    // Arrays.fill(numbers, 0);
+    
+    System.out.println(Arrays.toString(numbers));
+    System.out.println(Arrays.toString(copyOfNumbers));
+    System.out.println(Arrays.toString(subCopyNumbers));
+    System.out.println(Arrays.equals(numbers, copyOfNumbers));
     }
     
 }
